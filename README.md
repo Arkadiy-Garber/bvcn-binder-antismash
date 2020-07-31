@@ -9,6 +9,10 @@ Part of the [Bioinformatics Virtual Coordination Network](https://biovcnet.githu
 
 ## Walkthrough
 
+Put bioinf_tools into PATH
+
+    export PATH="${PATH}:/home/jovyan/MagicCave:/home/jovyan/bioinf_tools"
+
 Download antismash databases
 
     download-antismash-databases
@@ -27,8 +31,9 @@ Run the simplest version of the command with an assembly
 
  Convert GenBank output file to FASTA format
 
-    antismash --genefinding-tool prodigal Sodalis_praecaptivus-fixed.fasta
-
+    bit-genbank-to-fasta -i NZ_CP006569.1.region001.gbk -o NZ_CP006569.1.region001.fasta
+    bit-genbank-to-AA-seqs -i NZ_CP006569.1.region001.gbk -f NZ_CP006569.1.region001.faa
+    
 Print full help menu
 
     antismash --help-showall
