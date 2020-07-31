@@ -25,6 +25,10 @@ Run the simplest version of the command with an assembly
 
     antismash --genefinding-tool prodigal Sodalis_praecaptivus-fixed.fasta
 
+ Convert GenBank output file to FASTA format
+
+    antismash --genefinding-tool prodigal Sodalis_praecaptivus-fixed.fasta
+
 Print full help menu
 
     antismash --help-showall
