@@ -9,27 +9,29 @@ Part of the [Bioinformatics Virtual Coordination Network](https://biovcnet.githu
 
 ## Walkthrough
 
-Enter the MagicCave
+Download antismash databases
 
-    cd MagicCave/
+    download-antismash-databases
 
-print the MagicLamp help menu
+Print the antismash help menu
 
-    MagicLamp.py help
+    antismash -h
 
-print WspGenie help menu
+Run the simplest version of the command
 
-    MagicLamp.py WspGenie -h
+    antismash Sodalis_praecaptivus-fixed.gbk
 
-run WspGenie on test dataset
+Run the simplest version of the command with an assembly
 
-    MagicLamp.py WspGenie -bin_dir test_dataset/ -bin_ext fna -out wspgenie_out
+    antismash --genefinding-tool prodigal Sodalis_praecaptivus-fixed.fasta
 
+Print full help menu
+
+    antismash --help-showall
 
 go into the wspgenie output directory and check out the output file
 
-    cd wspgenie_out/
-    less -S wspgenie-summary.csv
+    antismash --genefinding-tool prodigal --fullhmmer --pfam2go --asf --cb-knownclusters Sodalis_praecaptivus-fixed.fasta
 
 check out the gene predictions
 
